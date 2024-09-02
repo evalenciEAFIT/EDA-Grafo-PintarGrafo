@@ -1,13 +1,10 @@
 # Coloración de Grafos: Fronteras de Sudamérica
-
 Este proyecto implementa una solución al problema de coloración de grafos, aplicándolo a un mapa de Sudamérica. Utiliza una tabla hash personalizada para representar el grafo de países y sus fronteras.
 
 ## El Problema de Coloración de Grafos
-
 La coloración de grafos es un problema clásico en teoría de grafos y ciencias de la computación. El objetivo es asignar colores a los vértices de un grafo de tal manera que no haya dos vértices adyacentes (conectados por una arista) que tengan el mismo color, usando el menor número posible de colores.
 
 ### Aplicación a las Fronteras de Sudamérica
-
 En el contexto de este proyecto, aplicamos la coloración de grafos al mapa de Sudamérica:
 
 - Cada país es un vértice en el grafo.
@@ -34,7 +31,6 @@ Nuestro enfoque para resolver este problema incluye:
    - Usamos la estructura de la tabla hash para almacenar y recuperar eficientemente esta información.
 
 ## Características del Proyecto
-
 - Implementación de una tabla hash personalizada
 - Representación de países con nombre, capital y moneda
 - Grafo de países de Sudamérica con sus fronteras
@@ -42,7 +38,6 @@ Nuestro enfoque para resolver este problema incluye:
 - Visualización de resultados con colores en la terminal
 
 ## Estructura del Proyecto
-
 - `Pais.h` y `Pais.cpp`: Definición e implementación de la clase Pais
 - `Nodo.h` y `Nodo.cpp`: Definición e implementación de la clase Nodo para la tabla hash
 - `HashTable.h` y `HashTable.cpp`: Implementación de la tabla hash
@@ -51,7 +46,6 @@ Nuestro enfoque para resolver este problema incluye:
 - `Makefile`: Para compilar el proyecto
 
 ## Compilación y Ejecución
-
 Para compilar el proyecto:
 
 ```
@@ -65,6 +59,60 @@ Para ejecutar el programa:
 ```
 
 ## Ejemplo de Salida
+Cuando ejecutes el programa en una terminal que soporte colores ANSI, verás una salida similar a esta:
+
+```
+Coloreado de países de Sudamérica:
+
+País:           Argentina
+Capital:        Buenos Aires
+Moneda:         Peso argentino
+Color:          Rojo
+Fronteras con:  Bolivia, Brasil, Chile, Paraguay, Uruguay
+
+País:           Bolivia
+Capital:        La Paz
+Moneda:         Boliviano
+Color:          Verde
+Fronteras con:  Argentina, Brasil, Chile, Paraguay, Perú
+
+País:           Brasil
+Capital:        Brasilia
+Moneda:         Real brasileño
+Color:          Azul
+Fronteras con:  Argentina, Bolivia, Colombia, Guyana, Paraguay, Perú, Surinam, Uruguay, Venezuela
+
+País:           Chile
+Capital:        Santiago
+Moneda:         Peso chileno
+Color:          Amarillo
+Fronteras con:  Argentina, Bolivia, Perú
+
+[... Resto de los países ...]
+```
+
+Nota: En la salida real, cada bloque de país se mostrará en el color asignado. Por ejemplo:
+- Argentina se mostrará en texto rojo
+- Bolivia en texto verde
+- Brasil en texto azul
+- Chile en texto amarillo
+
+Esta visualización colorida permite identificar fácilmente que ningún país adyacente tiene el mismo color.
+
+Observaciones sobre la salida:
+- Cada país se muestra con su nombre, capital, moneda y color asignado.
+- Las fronteras de cada país se listan, demostrando las conexiones en el grafo.
+- Los colores se distribuyen de manera que ningún país tenga el mismo color que sus vecinos.
+- Se utilizan solo cuatro colores (Rojo, Verde, Azul, Amarillo) para todo el mapa, lo cual es consistente con el Teorema de los Cuatro Colores.
+
+Esta visualización ayuda a entender cómo el algoritmo de coloración de grafos ha resuelto el problema de asignar colores a los países de Sudamérica de manera que ningún par de países adyacentes tenga el mismo color.
+
+## Notas sobre la Visualización de Colores
+
+- La visualización de colores funciona mejor en terminales Unix/Linux que soportan códigos de color ANSI.
+- En Windows, puede que necesites usar Windows Terminal o habilitar el soporte ANSI en la consola CMD para ver los colores correctamente.
+- Si tu terminal no soporta colores, aún verás la información, pero sin la coloración del texto.
+
 
 El programa mostrará:
 1. Una lista de países de Sudamérica con sus capitales, monedas y colores asignados.
